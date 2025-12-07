@@ -1,0 +1,428 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: #f7f7f7;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.title-box {
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 30px;
+}
+
+/* Showcase */
+
+.book-showcase {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+.book-cover-wrapper img {
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform .3s ease;
+}
+
+.book-cover-wrapper img:hover {
+  transform: scale(1.09);
+}
+
+/* Interactive cards */
+.interactive {
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.interactive:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Quote */
+.featured-quote {
+  background: #111;
+  color: #fff;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.quote-mark {
+  font-size: 3rem;
+  opacity: 0.3;
+}
+
+/* Section */
+.section {
+  margin-top: 40px;
+}
+
+.section h3 {
+  margin-bottom: 15px;
+}
+
+/* Philosophy grid */
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.philosophy-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.philosophy-card:hover {
+  transform: scale(1.03);
+}
+
+/* Lessons */
+.lesson-item {
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.lesson-item:hover {
+  background: #eee;
+}
+
+.lesson-item p.hidden {
+  display: none;
+}
+
+/* Expand */
+.expandable.open p.hidden {
+  display: block;
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn .10s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Zoom animation */
+.zoom-in {
+  animation: zoom .6s ease;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.9); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
+
+/* Toggle btn */
+.toggle-btn {
+  margin-top: 15px;
+  padding: 8px 15px;
+  border: none;
+  background: #222;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.toggle-btn:hover {
+  opacity: 0.8;
+}
+.student-card {
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  animation: fadeIn .5s ease forwards;
+  border-left: 5px solid #000;
+}
+
+.student-card h3 {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.student-card .label {
+  font-weight: 600;
+  color: #444;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* CARD CHUNG */
+.student-card {
+  background: #fff;
+  border-left: 6px solid #ff7a00;
+  padding: 0;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+  margin-bottom: 25px;
+  overflow: hidden;
+  transition: all .3s ease;
+}
+
+/* HEADER */
+.card-header {
+  padding: 20px 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  color: #fff;
+}
+
+.card-header h3 {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.card-header .arrow {
+  transition: transform .3s ease;
+  font-size: 18px;
+}
+
+/* CONTENT */
+.card-content {
+  padding: 18px 25px;
+  display: none;
+  background: #fff;
+  animation: fadeIn .3s ease;
+}
+
+.label {
+  font-weight: 600;
+  color: #ff7a00;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Khi mở card */
+.interactive-card.active .card-content {
+  display: block;
+}
+
+.interactive-card.active .arrow {
+  transform: rotate(180deg);
+}
+/* Định dạng cho ảnh nội dung (ví dụ, làm nó nhỏ hơn) */
+.author-img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 3px solid #000000; /* Thêm viền màu đen */
+    border-radius: 10px;
+}
+/* ==== LESSON LIST ==== */
+.lesson-wrapper {
+    margin-top: 40px;
+}
+
+.lesson-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* từng item */
+.lesson-item {
+    background: #fff;
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    border-left: 6px solid transparent;
+}
+
+.lesson-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    border-left: 6px solid #ff7a00;
+}
+
+.lesson-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lesson-number {
+    font-weight: 700;
+    color: #555;
+    margin-right: 15px;
+}
+
+.lesson-text {
+    flex: 1;
+    font-weight: 600;
+}
+
+.lesson-icon {
+    transition: 0.25s ease;
+}
+
+/* nội dung ẩn */
+.lesson-content {
+    margin-top: 10px;
+    padding-top: 8px;
+    display: none;
+    border-top: 1px solid #eee;
+    animation: fadeIn 0.25s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* khi mở */
+.lesson-item.active .lesson-content {
+    display: block;
+}
+
+.lesson-item.active .lesson-icon {
+    transform: rotate(-180deg);
+}
+
+/* 1. Thiết lập Container (Mẹ) */
+.image-row {
+    display: flex; /* Bật chế độ Flexbox */
+    justify-content: space-around; /* Phân phối không gian đều giữa các ảnh */
+    align-items: flex-start; /* Căn chỉnh các ảnh theo chiều dọc (đầu hàng) */
+    gap: 20px; /* Thêm khoảng cách giữa các ảnh (tùy chọn) */
+    margin: 30px auto; /* Khoảng cách trên/dưới cho toàn bộ hàng */
+    padding: 0 10px;
+}
+
+/* 2. Thiết lập các Ảnh (Con) */
+.gallery-img {
+    /* Đặt kích thước cho mỗi ảnh.
+       Dùng calc() để chia 100% thành 3 phần, trừ đi khoảng cách (gap) */
+    width: calc(33.33% - 20px); 
+    max-width: 200px; /* Đặt giới hạn tối đa cho ảnh */
+    height: auto; 
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột qua */
+.gallery-img:hover {
+    transform: scale(2);
+}
+
+/* (Tùy chọn) Thiết lập responsive cho màn hình nhỏ hơn */
+@media (max-width: 600px) {
+    .image-row {
+        flex-direction: column; /* Trên điện thoại, xếp ảnh thành 3 hàng dọc */
+        align-items: center;
+    }
+    .gallery-img {
+        width: 80%; /* Cho ảnh chiếm 80% màn hình khi xếp dọc */
+        margin-bottom: 15px;
+    }
+}
+
+/* 1. Thiết lập Container Pros-Cons (Mẹ) */
+.pros-cons {
+    display: flex;
+    justify-content: space-between; 
+    gap: 10px; 
+    margin: 25px 0;
+    text-align: left; 
+}
+
+/* 2. Thiết lập hai Cột (Con) */
+.pros-container, .cons-container {
+    flex: 1; 
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.pros-container {
+    background-color: rgba(46, 204, 113, 0.1); 
+    border: 1px solid #2ecc71;
+}
+
+.cons-container {
+    background-color: rgba(231, 76, 60, 0.1); 
+    border: 1px solid #e74c3c;
+}
+
+/* 3. Định dạng danh sách */
+.pros-cons h4 {
+    margin-top: 0;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.pros-cons ul {
+    list-style-type: disc; 
+    padding-left: 20px; 
+}
+
+.pros-cons li {
+    margin-bottom: 8px; 
+}
+/* Hiệu ứng responsive: Trên điện thoại, xếp Ưu/Nhược điểm thành 2 hàng dọc */
+@media (max-width: 700px) {
+    .pros-cons {
+        flex-direction: column;
+    }
+}
